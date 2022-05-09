@@ -1,0 +1,29 @@
+{
+  "applications": ["Restaurante"],
+  "changelogDate": "20220509130307",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "factura",
+  "fields": [
+    {
+      "fieldName": "fecha",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Factura",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "registroMesa",
+      "otherEntityRelationshipName": "factura",
+      "ownerSide": true,
+      "relationshipName": "registroMesa",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

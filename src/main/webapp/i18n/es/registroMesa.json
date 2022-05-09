@@ -1,0 +1,27 @@
+{
+  "restauranteApp": {
+    "registroMesa": {
+      "home": {
+        "title": "Registro Mesas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Registro Mesa",
+        "createOrEditLabel": "Crear o editar Registro Mesa",
+        "notFound": "Ningún Registro Mesas encontrado"
+      },
+      "created": "Un nuevo Registro Mesa ha sido creado con el identificador {{ param }}",
+      "updated": "Un Registro Mesa ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Registro Mesa ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Registro Mesa {{ id }}?"
+      },
+      "detail": {
+        "title": "Registro Mesa"
+      },
+      "id": "ID",
+      "fecha": "Fecha",
+      "mesa": "Mesa",
+      "factura": "Factura",
+      "lineaPedido": "Linea Pedido"
+    }
+  }
+}

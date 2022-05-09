@@ -1,0 +1,28 @@
+{
+  "restauranteApp": {
+    "lineaPedido": {
+      "home": {
+        "title": "Linea Pedidos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Linea Pedido",
+        "createOrEditLabel": "Crear o editar Linea Pedido",
+        "notFound": "Ningún Linea Pedidos encontrado"
+      },
+      "created": "Un nuevo Linea Pedido ha sido creado con el identificador {{ param }}",
+      "updated": "Un Linea Pedido ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Linea Pedido ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Linea Pedido {{ id }}?"
+      },
+      "detail": {
+        "title": "Linea Pedido"
+      },
+      "id": "ID",
+      "precio": "Precio",
+      "iva": "Iva",
+      "cantidad": "Cantidad",
+      "registroMesa": "Registro Mesa",
+      "producto": "Producto"
+    }
+  }
+}

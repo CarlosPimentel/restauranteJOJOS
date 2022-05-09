@@ -1,0 +1,28 @@
+{
+  "applications": ["Restaurante"],
+  "changelogDate": "20220509130507",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "reserva",
+  "fields": [
+    {
+      "fieldName": "fecha",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Reserva",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "mesa",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "mesa",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

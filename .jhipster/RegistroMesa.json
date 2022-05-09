@@ -1,0 +1,41 @@
+{
+  "applications": ["Restaurante"],
+  "changelogDate": "20220509130407",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "registro_mesa",
+  "fields": [
+    {
+      "fieldName": "fecha",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RegistroMesa",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "mesa",
+      "otherEntityRelationshipName": "registroMesa",
+      "relationshipName": "mesa",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "factura",
+      "otherEntityRelationshipName": "registroMesa",
+      "ownerSide": false,
+      "relationshipName": "factura",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "lineaPedido",
+      "otherEntityRelationshipName": "registroMesa",
+      "relationshipName": "lineaPedido",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

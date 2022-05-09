@@ -1,0 +1,44 @@
+{
+  "applications": ["Restaurante"],
+  "changelogDate": "20220509130207",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "linea_pedido",
+  "fields": [
+    {
+      "fieldName": "precio",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "iva",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cantidad",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LineaPedido",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "registroMesa",
+      "otherEntityRelationshipName": "lineaPedido",
+      "relationshipName": "registroMesa",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "producto",
+      "otherEntityRelationshipName": "lineaPedido",
+      "relationshipName": "producto",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

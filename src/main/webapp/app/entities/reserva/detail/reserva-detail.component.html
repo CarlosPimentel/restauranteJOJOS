@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="reserva">
+      <h2 data-cy="reservaDetailsHeading"><span jhiTranslate="restauranteApp.reserva.detail.title">Reserva</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ reserva.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.fecha">Fecha</span></dt>
+        <dd>
+          <span>{{ reserva.fecha | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.mesa">Mesa</span></dt>
+        <dd>
+          <div *ngIf="reserva.mesa">
+            <a [routerLink]="['/mesa', reserva.mesa?.id, 'view']">{{ reserva.mesa?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/reserva', reserva.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+{
+  "applications": ["Restaurante"],
+  "changelogDate": "20220509130007",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "mesa",
+  "fields": [
+    {
+      "fieldName": "estado",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "2",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "numero",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Mesa",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "mesa",
+      "relationshipName": "reserva",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "registroMesa",
+      "otherEntityRelationshipName": "mesa",
+      "relationshipName": "registroMesa",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

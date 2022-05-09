@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="registroMesa">
+      <h2 data-cy="registroMesaDetailsHeading"><span jhiTranslate="restauranteApp.registroMesa.detail.title">Registro Mesa</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ registroMesa.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.registroMesa.fecha">Fecha</span></dt>
+        <dd>
+          <span>{{ registroMesa.fecha | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.registroMesa.mesa">Mesa</span></dt>
+        <dd>
+          <div *ngIf="registroMesa.mesa">
+            <a [routerLink]="['/mesa', registroMesa.mesa?.id, 'view']">{{ registroMesa.mesa?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/registro-mesa', registroMesa.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

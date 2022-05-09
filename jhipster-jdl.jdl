@@ -1,0 +1,70 @@
+
+application {
+  config {
+    baseName Restaurante
+    applicationType monolith
+    packageName com.restaurante.app
+	authenticationType jwt 
+    databaseType sql 
+    prodDatabaseType mysql 
+    devDatabaseType mysql 
+    clientFramework angularX 
+    nativeLanguage es 
+    languages [en] 
+    buildTool maven 
+  }
+  entities *
+}
+
+entity Mesa {
+	estado Integer required min(0) max(2)
+    numero Integer required
+    }
+
+entity Producto {
+	tipo Integer required min(0) max(4)
+    referencia String required
+	nombre String required
+	precio Double required
+	iva Integer required
+    url String required
+    }
+    
+entity LineaPedido {
+	precio Double required
+	iva Integer required
+    cantidad Integer required
+    }
+    
+entity Factura {
+    fecha ZonedDateTime required
+    }
+    
+entity RegistroMesa {
+    fecha ZonedDateTime required
+    }
+    
+  entity Reserva {
+    fecha ZonedDateTime required
+    }
+    
+service Mesa with serviceClass
+service Producto with serviceClass
+service LineaPedido with serviceClass
+service Factura with serviceClass
+service RegistroMesa with serviceClass
+service Reserva with serviceClass
+
+
+relationship ManyToOne {
+  LineaPedido to RegistroMesa
+  Reserva to Mesa 
+  RegistroMesa to Mesa
+  LineaPedido to Producto
+  
+}
+
+relationship OneToOne {
+  Factura to RegistroMesa
+  
+}

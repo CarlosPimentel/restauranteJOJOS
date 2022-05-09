@@ -1,0 +1,27 @@
+{
+  "restauranteApp": {
+    "mesa": {
+      "home": {
+        "title": "Mesas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Mesa",
+        "createOrEditLabel": "Crear o editar Mesa",
+        "notFound": "Ningún Mesas encontrado"
+      },
+      "created": "Un nuevo Mesa ha sido creado con el identificador {{ param }}",
+      "updated": "Un Mesa ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Mesa ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Mesa {{ id }}?"
+      },
+      "detail": {
+        "title": "Mesa"
+      },
+      "id": "ID",
+      "estado": "Estado",
+      "numero": "Numero",
+      "reserva": "Reserva",
+      "registroMesa": "Registro Mesa"
+    }
+  }
+}
