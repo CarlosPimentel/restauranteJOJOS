@@ -80,11 +80,8 @@ button {
   margin-bottom: 1%;
 }
 
-span {
-  background-color: #dbb66c;
-  /*   height: 120px;
-  width: 130px; */
-  border-radius: 50%;
+
+#contenedorAbajoDerechaArriba button{
   display: inline-block;
   margin-left: 3%;
   margin-bottom: 5%;
@@ -92,5 +89,4 @@ span {
   font-weight: bold;
   text-align: center;
   width: 16%;
-  padding: 2% 0.5% 2% 0.5%;
-}
+  padding: 2% 0.5% 2% 0.5%;}

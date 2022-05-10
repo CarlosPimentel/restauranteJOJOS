@@ -10,7 +10,6 @@ import { LineaPedidoService } from 'app/entities/linea-pedido/service/linea-pedi
 
 import { Factura, IFactura } from 'app/entities/factura/factura.model';
 
-import dayjs from 'dayjs/esm';
 import { FacturaService } from 'app/entities/factura/service/factura.service';
 
 import { IProducto, Producto } from 'app/entities/producto/producto.model';
@@ -82,5 +81,10 @@ export class tpvComponent implements OnInit {
         this.isLoading = false;
       },
     });
-  } 
+  }
+  
+  previousState(): void {
+    window.history.back();
+  }
+ 
 }

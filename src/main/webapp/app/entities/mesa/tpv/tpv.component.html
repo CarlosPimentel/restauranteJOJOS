@@ -1,7 +1,7 @@
 <div onload="cargarProductos()">
   <div id="contenedorPrincipal">
     <div id="contenedorArriba">
-      <button type="button" class="btn btn-secondary" >
+      <button type="button" class="btn btn-secondary" (click)="previousState()">
         <fa-icon icon="arrow-left"></fa-icon>
       </button>
       <div id="contenedorArribaIzquierda" class="color">
@@ -36,11 +36,11 @@
 
       <div id="contenedorAbajoDerecha">
         <div id="contenedorAbajoDerechaArriba">
-          <span (click)="encontrarProductosTipo(1)">Bebidas</span>
-          <span (click)="encontrarProductosTipo(2)">Entrantes</span>
-          <span (click)="encontrarProductosTipo(3)">Primeros Platos</span>
-          <span (click)="encontrarProductosTipo(4)">Segundos Platos</span>
-          <span (click)="encontrarProductosTipo(5)">Postres</span>
+          <button type="button" class="btn btn-secondary rounded-circle" (click)="encontrarProductosTipo(1)">Bebidas</button>
+          <button type="button" class="btn btn-secondary rounded-circle" (click)="encontrarProductosTipo(2)">Entrantes</button>
+          <button type="button" class="btn btn-secondary rounded-circle" (click)="encontrarProductosTipo(3)">Primeros Platos</button>
+          <button type="button" class="btn btn-secondary rounded-circle" (click)="encontrarProductosTipo(4)">Segundos Platos</button>
+          <button type="button" class="btn btn-secondary rounded-circle" (click)="encontrarProductosTipo(5)">Postres</button> 
         </div>
         <div class="grid" id="entities" *ngIf="productos && productos.length > 0">
           <div *ngFor="let producto of productos;" class="contenedorAbajoDerechaAbajo">
