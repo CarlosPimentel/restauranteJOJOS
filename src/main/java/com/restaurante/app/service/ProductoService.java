@@ -103,4 +103,14 @@ public class ProductoService {
         log.debug("Request to delete Producto : {}", id);
         productoRepository.deleteById(id);
     }
+
+        /**
+     * Consigue los productos de un tipo
+     *
+     * @return the list of entities.
+     */
+    @Transactional(readOnly = true)
+    public List<Producto> findTodosProductosTipo(Integer tipo) {
+        return productoRepository.findByTipo(tipo);
+    }
 }

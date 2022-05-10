@@ -36,11 +36,11 @@
 
       <div id="contenedorAbajoDerecha">
         <div id="contenedorAbajoDerechaArriba">
-          <span>Bebidas</span>
-          <span >Entrantes</span>
-          <span  >Primeros Platos</span>
-          <span  >Segundos Platos</span>
-          <span >Postres</span>
+          <span (click)="encontrarProductosTipo(1)">Bebidas</span>
+          <span (click)="encontrarProductosTipo(2)">Entrantes</span>
+          <span (click)="encontrarProductosTipo(3)">Primeros Platos</span>
+          <span (click)="encontrarProductosTipo(4)">Segundos Platos</span>
+          <span (click)="encontrarProductosTipo(5)">Postres</span>
         </div>
         <div class="grid" id="entities" *ngIf="productos && productos.length > 0">
           <div *ngFor="let producto of productos;" class="contenedorAbajoDerechaAbajo">

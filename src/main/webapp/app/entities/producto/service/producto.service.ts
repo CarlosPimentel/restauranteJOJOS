@@ -59,4 +59,9 @@ export class ProductoService {
     }
     return productoCollection;
   }
+   /********** PERSONALIZADOS **********/
+
+   findTipoProducto(tipo: number): Observable<EntityArrayResponseType> {
+    return this.http.get<IProducto[]>(`${this.resourceUrl}/tipo/${tipo}`, { observe: 'response' });
+  }
 }

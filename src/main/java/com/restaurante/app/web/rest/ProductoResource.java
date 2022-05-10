@@ -171,4 +171,12 @@ public class ProductoResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+
+    /**
+     * {@code GET  /productos} : Consigue todos los productos de un tipo
+     */
+    @GetMapping("/productos/tipo/{tipo}")
+    public List<Producto> getTodosProductosTipo(@PathVariable Integer tipo) {
+        return productoService.findTodosProductosTipo(tipo);
+    }
 }
