@@ -1,0 +1,56 @@
+<div onload="cargarProductos()">
+  <div id="contenedorPrincipal">
+    <div id="contenedorArriba">
+      <button type="button" class="btn btn-secondary" >
+        <fa-icon icon="arrow-left"></fa-icon>
+      </button>
+      <div id="contenedorArribaIzquierda" class="color">
+        <h1>Numero de Mesa {{ numeroMesa?.numero }}</h1>
+      </div>
+
+      <div id="contenedorArribaDerecha" class="color">
+        <h1>Mesa</h1>
+      </div>
+    </div>
+    <div id="contenedorAbajo">
+      <div id="contenedorAbajoIzquierda" class="color">
+        <div>
+          <h1>Pedido</h1>
+          <ul *ngFor="let lineapedido of pedidos; ">
+            <li>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h1>Cantidad</h1>
+          <ul *ngFor="let lineapedido of pedidos;">
+        
+       <li>
+      <div ><fa-icon icon="plus"></fa-icon></div>
+              <div>{{ lineapedido.cantidad }}</div>
+              <div ><fa-icon icon="minus"></fa-icon></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="contenedorAbajoDerecha">
+        <div id="contenedorAbajoDerechaArriba">
+          <span>Bebidas</span>
+          <span >Entrantes</span>
+          <span  >Primeros Platos</span>
+          <span  >Segundos Platos</span>
+          <span >Postres</span>
+        </div>
+        <div class="grid" id="entities" *ngIf="productos && productos.length > 0">
+          <div *ngFor="let producto of productos;" class="contenedorAbajoDerechaAbajo">
+            <img class="img" src="{{ producto.url }}" />
+            <br />
+            <p class="text-light">{{ producto.nombre }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary">Generar Factura</button>
+  </div>
+</div>

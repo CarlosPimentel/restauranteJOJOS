@@ -1,0 +1,96 @@
+#contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  padding: 8px;
+  background-color: #252321;
+}
+li {
+  list-style: none;
+}
+li div {
+  display: inline;
+}
+
+#contenedorPrincipal div {
+  width: 100%;
+  padding: 8px;
+}
+
+#contenedorArriba {
+  display: flex;
+  width: 100%;
+}
+.contenedorAbajoDerechaAbajo :active {
+  transform: translateY(4px);
+}
+
+#contenedorArriba button {
+  width: 10%;
+  height: 100%;
+}
+button {
+  width: 50%;
+  height: 15%;
+}
+#contenedorIzquierda {
+  width: 100%;
+}
+
+#contenedorDerecha {
+  width: 100%;
+}
+
+#contenedorAbajo {
+  display: flex;
+  padding: 8px;
+  width: 100%;
+  height: 80%;
+}
+#contenedorAbajoIzquierda {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+  overflow-y: scroll;
+}
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 90%;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Euonia';
+  src: url('/fonts/euonia.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.color {
+  background-color: #dbb66c;
+  font-family: 'Euonia';
+}
+.img {
+  height: 70%;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+span {
+  background-color: #dbb66c;
+  /*   height: 120px;
+  width: 130px; */
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 3%;
+  margin-bottom: 5%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  width: 16%;
+  padding: 2% 0.5% 2% 0.5%;
+}

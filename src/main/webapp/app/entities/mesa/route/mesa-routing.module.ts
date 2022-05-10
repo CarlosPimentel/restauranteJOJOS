@@ -6,11 +6,20 @@ import { MesaComponent } from '../list/mesa.component';
 import { MesaDetailComponent } from '../detail/mesa-detail.component';
 import { MesaUpdateComponent } from '../update/mesa-update.component';
 import { MesaRoutingResolveService } from './mesa-routing-resolve.service';
+import { tpvComponent } from '../tpv/tpv.component';
 
 const mesaRoute: Routes = [
   {
     path: '',
     component: MesaComponent,
+    canActivate: [UserRouteAccessService],
+  },
+  {
+    path: ':id/tpv',
+    component: tpvComponent,
+    resolve: {
+      mesa: MesaRoutingResolveService,
+    },
     canActivate: [UserRouteAccessService],
   },
   {
