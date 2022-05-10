@@ -11,8 +11,7 @@
         "producto": "Producto",
         "lineaPedido": "Linea Pedido",
         "factura": "Factura",
-        "registroMesa": "Registro Mesa",
-        "reserva": "Reserva",
+        "lineaFactura": "Linea Factura",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

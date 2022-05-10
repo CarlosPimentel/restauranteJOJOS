@@ -91,4 +91,12 @@ public class MesaService {
         log.debug("Request to delete Mesa : {}", id);
         mesaRepository.deleteById(id);
     }
+
+
+    @Transactional(readOnly = true)
+    public Mesa devolverUltimasMesas(Integer numeroMesa) {
+        log.debug("Llega al estadoMesa del service");
+        return mesaRepository.devolverUltimasMesas(numeroMesa);
+    }
+
 }

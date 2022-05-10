@@ -6,6 +6,7 @@ import com.restaurante.app.service.MesaService;
 import com.restaurante.app.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -169,4 +170,16 @@ public class MesaResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+
+    @GetMapping("/mesas/ultimasmesas")
+    public List<Mesa> devolverUltimasMesas() {
+        List<Mesa> listaMesas = new ArrayList<Mesa>();
+
+        for (int i = 1; i <= 6; i++) {
+            listaMesas.add(mesaService.devolverUltimasMesas(i));
+        }
+
+        return listaMesas;
+    }
+
 }

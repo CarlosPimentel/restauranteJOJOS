@@ -1,6 +1,7 @@
 {
   "login": {
     "title": "Iniciar la sesión",
+    "restaurant": "Restaurante JOJOS",
     "form": {
       "password": "Contraseña",
       "password.placeholder": "Su contraseña",

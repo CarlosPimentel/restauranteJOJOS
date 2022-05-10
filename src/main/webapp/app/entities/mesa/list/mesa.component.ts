@@ -9,6 +9,8 @@ import { MesaDeleteDialogComponent } from '../delete/mesa-delete-dialog.componen
 @Component({
   selector: 'jhi-mesa',
   templateUrl: './mesa.component.html',
+  styleUrls: ['./mesa.component.css'],
+
 })
 export class MesaComponent implements OnInit {
   mesas?: IMesa[];
@@ -19,7 +21,8 @@ export class MesaComponent implements OnInit {
   loadAll(): void {
     this.isLoading = true;
 
-    this.mesaService.query().subscribe({
+  
+    this.mesaService.devolverUltimasMesas({}).subscribe({
       next: (res: HttpResponse<IMesa[]>) => {
         this.isLoading = false;
         this.mesas = res.body ?? [];

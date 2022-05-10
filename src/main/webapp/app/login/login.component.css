@@ -1,0 +1,44 @@
+.imagenLogoLogin {
+  background-image: './../content/images/logo.png';
+  opacity: 40%;
+
+  position: absolute;
+
+  left: 30%;
+  top: 0;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+form {
+  text-align: center;
+}
+.boton {
+  width: 15%;
+  height: 50px;
+  background-color: #d0bc49;
+  border-radius: 40px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  position: relative;
+}
+
+.boton:hover {
+  background-color: rgb(151, 133, 34); /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+* {
+  z-index: 1;
+}
+
+@font-face {
+  font-family: 'Euonia';
+  src: url('/fonts/euonia.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Jojos {
+  font-family: 'Euonia';
+}

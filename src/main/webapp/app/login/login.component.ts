@@ -8,6 +8,7 @@ import { AccountService } from 'app/core/auth/account.service';
 @Component({
   selector: 'jhi-login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit, AfterViewInit {
   @ViewChild('username', { static: false })
@@ -53,7 +54,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
           this.authenticationError = false;
           if (!this.router.getCurrentNavigation()) {
             // There were no routing during login (eg from navigationToStoredUrl)
-            this.router.navigate(['']);
+            this.router.navigate(['/mesa']);
           }
         },
         error: () => (this.authenticationError = true),

@@ -36,7 +36,11 @@ export class MesaService {
     const options = createRequestOption(req);
     return this.http.get<IMesa[]>(this.resourceUrl, { params: options, observe: 'response' });
   }
-
+  //-----------------------------------------------//
+  devolverUltimasMesas(req?: any): Observable<EntityArrayResponseType> {
+    const options = createRequestOption(req);
+    return this.http.get<IMesa[]>(`${this.resourceUrl}/ultimasmesas`, { params: options, observe: 'response' });
+  }
   delete(id: number): Observable<HttpResponse<{}>> {
     return this.http.delete(`${this.resourceUrl}/${id}`, { observe: 'response' });
   }

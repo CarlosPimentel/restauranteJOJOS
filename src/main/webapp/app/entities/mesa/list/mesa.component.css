@@ -1,0 +1,17 @@
+#mesas {
+  width: 100%;
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#mesas div {
+  padding-left: 30px;
+  padding-bottom: 10px;
+  width: 33%;
+}
+
+.tamano {
+  width: 350px;
+}
